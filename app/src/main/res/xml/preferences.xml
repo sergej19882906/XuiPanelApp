@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Подключение к панели"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:key="panel_host"
+            android:title="Хост панели"
+            android:summary="IP-адрес или домен x-ui панели"
+            android:defaultValue=""
+            android:inputType="textUri"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:key="panel_port"
+            android:title="Порт"
+            android:summary="Порт панели x-ui"
+            android:defaultValue="2053"
+            android:inputType="number"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:key="panel_path"
+            android:title="Путь"
+            android:summary="Путь к панели (обычно /)"
+            android:defaultValue="/"
+            android:inputType="textUri"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:key="use_https"
+            android:title="Использовать HTTPS"
+            android:summary="Включите для HTTPS подключения"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Дополнительно"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:key="accept_self_signed"
+            android:title="Принимать самоподписанные сертификаты"
+            android:summary="Разрешить подключение с самоподписанными SSL сертификатами"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
