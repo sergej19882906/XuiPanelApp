@@ -1,13 +1,15 @@
 *.iml
-.gradle
+.gradle/
 /local.properties
-/.idea
+/.idea/
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
 local.properties
-
-# Project exclude paths
-/app/build/
+keystore.properties
+keystore/
+*.jks
+*.keystore
+app/build/
